@@ -1,8 +1,3 @@
-#
-# The result of loading and dereferencing any of the source schemas:
-# - petstore/source.yaml (the same as above with $ref to models.yaml)
-# - petstore/source.json (the same as above in json format)
-#
 ---
 swagger: '2.0'
 info:

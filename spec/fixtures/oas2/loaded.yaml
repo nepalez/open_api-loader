@@ -1,6 +1,3 @@
-#
-# The result of loading specifications (all keys are stringified)
-#
 ---
 swagger: '2.0'
 info:

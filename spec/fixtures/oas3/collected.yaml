@@ -1,9 +1,3 @@
-#
-# The OAS3 specification downloaded from
-# https://github.com/OAI/OpenAPI-Specification/blob/master/examples/v3.0/uspto.yaml
-#
-# The source.json contain exactly the same data in JSON format
-#
 ---
 openapi: 3.0.0
 servers:
