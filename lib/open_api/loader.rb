@@ -3,6 +3,7 @@ require "dry-initializer"
 require "json"
 require "yaml"
 require "uri"
+require "delegate"
 
 #
 # Namespace for gems dealing with OAS specifications
@@ -22,7 +23,7 @@ module OpenAPI
     require_relative "loader/ref"
     require_relative "loader/reader"
     require_relative "loader/collector"
-    require_relative "loader/cleaner"
+    require_relative "loader/translator"
 
     #
     # Loads the specification from given file
