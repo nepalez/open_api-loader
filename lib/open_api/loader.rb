@@ -21,6 +21,7 @@ module OpenAPI
 
     require_relative "loader/ref"
     require_relative "loader/reader"
+    require_relative "loader/collector"
 
     #
     # Loads the specification from given file

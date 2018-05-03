@@ -45,12 +45,34 @@ paths:
       operationId: list-data-sets
       summary: List available data sets
       responses:
-        200:
+        "200":
           description: Returns a list of data sets
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/dataSetList'
+                type: object
+                properties:
+                  total:
+                    type: integer
+                  apis:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        apiKey:
+                          type: string
+                          description: To be used as a dataset parameter value
+                        apiVersionNumber:
+                          type: string
+                          description: To be used as a version parameter value
+                        apiUrl:
+                          type: string
+                          format: uriref
+                          description: "The URL describing the dataset's fields"
+                        apiDocumentationUrl:
+                          type: string
+                          format: uriref
+                          description: A URL to the API console for each API
               example:
                 {
                   "total": 2,
@@ -98,7 +120,7 @@ paths:
         searched using the syntax options shown below.
       operationId: list-searchable-fields
       responses:
-        200:
+        "200":
           description: >-
             The dataset api for the given version is found and it is accessible
             to consume.
@@ -106,7 +128,7 @@ paths:
             application/json:
               schema:
                 type: string
-        404:
+        "404":
           description: >-
             The combination of dataset name and version is not found in the
             system or it is not published yet to be consumed by public.
@@ -147,7 +169,7 @@ paths:
         determined using above GET api.
       operationId: perform-search
       responses:
-        200:
+        "200":
           description: successful operation
           content:
             application/json:
@@ -157,7 +179,7 @@ paths:
                   type: object
                   additionalProperties:
                     type: object
-        404:
+        "404":
           description: No matching record found for the given criteria.
       requestBody:
         content:
