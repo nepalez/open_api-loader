@@ -20,6 +20,7 @@ module OpenAPI
     module_function
 
     require_relative "loader/ref"
+    require_relative "loader/reader"
 
     #
     # Loads the specification from given file
