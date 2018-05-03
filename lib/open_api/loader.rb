@@ -19,6 +19,8 @@ module OpenAPI
   module Loader
     module_function
 
+    require_relative "loader/ref"
+
     #
     # Loads the specification from given file
     #
