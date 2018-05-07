@@ -12,6 +12,6 @@ RSpec.describe OpenAPI::Loader::Denormalizer, ".call" do
     let(:source) { yaml_fixture_file "oas3/collected.yaml" }
     let(:target) { yaml_fixture_file "oas3/denormalized.yaml" }
 
-    it { is_expected.to eq source }
+    it { is_expected.to eq target }
   end
 end

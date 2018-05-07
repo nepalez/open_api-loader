@@ -34,11 +34,7 @@ paths:
       description: ''
       operationId: addPet
       servers:
-        - url: "{scheme}://petstore.swagger.io/v2"
-          variables:
-            scheme:
-              enum:
-                - http
+        - url: http://petstore.swagger.io/v2
       requestBody:
         description: Pet object that needs to be added to the store
         required: true
@@ -153,11 +149,7 @@ paths:
       description: ''
       operationId: updatePet
       servers:
-        - url: "{scheme}://petstore.swagger.io/v2"
-          variables:
-            scheme:
-              enum:
-                - http
+        - url: http://petstore.swagger.io/v2
       requestBody:
         description: Pet object that needs to be added to the store
         required: true
@@ -277,11 +269,7 @@ paths:
       description: Multiple status values can be provided with comma separated strings
       operationId: findPetsByStatus
       servers:
-        - url: "{scheme}://petstore.swagger.io/v2"
-          variables:
-            scheme:
-              enum:
-                - http
+        - url: http://petstore.swagger.io/v2
       parameters:
         - name: status
           in: query
@@ -417,11 +405,7 @@ paths:
         tag2, tag3 for testing.
       operationId: findPetsByTags
       servers:
-        - url: "{scheme}://petstore.swagger.io/v2"
-          variables:
-            scheme:
-              enum:
-                - http
+        - url: http://petstore.swagger.io/v2
       parameters:
         - name: tags
           in: query
@@ -552,11 +536,7 @@ paths:
       description: Returns a single pet
       operationId: getPetById
       servers:
-        - url: "{scheme}://petstore.swagger.io/v2"
-          variables:
-            scheme:
-              enum:
-                - http
+        - url: http://petstore.swagger.io/v2
       parameters:
         - name: petId
           in: path
@@ -678,11 +658,7 @@ paths:
       description: ''
       operationId: updatePetWithForm
       servers:
-        - url: "{scheme}://petstore.swagger.io/v2"
-          variables:
-            scheme:
-              enum:
-                - http
+        - url: http://petstore.swagger.io/v2
       parameters:
         - name: petId
           in: path
@@ -719,11 +695,7 @@ paths:
       description: ''
       operationId: deletePet
       servers:
-        - url: "{scheme}://petstore.swagger.io/v2"
-          variables:
-            scheme:
-              enum:
-                - http
+        - url: http://petstore.swagger.io/v2
       parameters:
         - name: petId
           in: path
@@ -754,11 +726,7 @@ paths:
       description: ''
       operationId: uploadFile
       servers:
-        - url: "{scheme}://petstore.swagger.io/v2"
-          variables:
-            scheme:
-              enum:
-                - http
+        - url: http://petstore.swagger.io/v2
       parameters:
         - name: petId
           in: path
@@ -808,11 +776,7 @@ paths:
       description: Returns a map of status codes to quantities
       operationId: getInventory
       servers:
-        - url: "{scheme}://petstore.swagger.io/v2"
-          variables:
-            scheme:
-              enum:
-                - http
+        - url: http://petstore.swagger.io/v2
       responses:
         '200':
           description: successful operation
@@ -833,11 +797,7 @@ paths:
       description: ''
       operationId: placeOrder
       servers:
-        - url: "{scheme}://petstore.swagger.io/v2"
-          variables:
-            scheme:
-              enum:
-                - http
+        - url: http://petstore.swagger.io/v2
       requestBody:
         required: true
         description: order placed for purchasing the pet
@@ -965,11 +925,7 @@ paths:
         values will generated exceptions
       operationId: getOrderById
       servers:
-        - url: "{scheme}://petstore.swagger.io/v2"
-          variables:
-            scheme:
-              enum:
-                - http
+        - url: http://petstore.swagger.io/v2
       parameters:
         - name: "orderId"
           in: "path"
@@ -1050,11 +1006,7 @@ paths:
         or non-integer values will generate API errors
       operationId: deleteOrder
       servers:
-        - url: "{scheme}://petstore.swagger.io/v2"
-          variables:
-            scheme:
-              enum:
-                - http
+        - url: http://petstore.swagger.io/v2
       parameters:
         - name: "orderId"
           in: "path"
@@ -1078,11 +1030,7 @@ paths:
       description: This can only be done by the logged in user.
       operationId: createUser
       servers:
-        - url: "{scheme}://petstore.swagger.io/v2"
-          variables:
-            scheme:
-              enum:
-                - http
+        - url: http://petstore.swagger.io/v2
       requestBody:
         description: Created user object
         required: true
@@ -1146,11 +1094,7 @@ paths:
       description: ''
       operationId: createUsersWithArrayInput
       servers:
-        - url: "{scheme}://petstore.swagger.io/v2"
-          variables:
-            scheme:
-              enum:
-                - http
+        - url: http://petstore.swagger.io/v2
       requestBody:
         description: List of user object
         required: true
@@ -1218,11 +1162,7 @@ paths:
       description: ''
       operationId: createUsersWithListInput
       servers:
-        - url: "{scheme}://petstore.swagger.io/v2"
-          variables:
-            scheme:
-              enum:
-                - http
+        - url: http://petstore.swagger.io/v2
       requestBody:
         description: List of user object
         required: true
@@ -1290,11 +1230,7 @@ paths:
       description: ''
       operationId: loginUser
       servers:
-        - url: "{scheme}://petstore.swagger.io/v2"
-          variables:
-            scheme:
-              enum:
-                - http
+        - url: http://petstore.swagger.io/v2
       parameters:
         - name: username
           in: query
@@ -1339,11 +1275,7 @@ paths:
       description: ''
       operationId: logoutUser
       servers:
-        - url: "{scheme}://petstore.swagger.io/v2"
-          variables:
-            scheme:
-              enum:
-                - http
+        - url: http://petstore.swagger.io/v2
       responses:
         default:
           description: successful operation
@@ -1355,11 +1287,7 @@ paths:
       description: ''
       operationId: getUserByName
       servers:
-        - url: "{scheme}://petstore.swagger.io/v2"
-          variables:
-            scheme:
-              enum:
-                - http
+        - url: http://petstore.swagger.io/v2
       parameters:
         - name: username
           in: path
@@ -1430,11 +1358,7 @@ paths:
       description: This can only be done by the logged in user.
       operationId: updateUser
       servers:
-        - url: "{scheme}://petstore.swagger.io/v2"
-          variables:
-            scheme:
-              enum:
-                - http
+        - url: http://petstore.swagger.io/v2
       parameters:
         - name: username
           in: path
@@ -1506,11 +1430,7 @@ paths:
       description: This can only be done by the logged in user.
       operationId: deleteUser
       servers:
-        - url: "{scheme}://petstore.swagger.io/v2"
-          variables:
-            scheme:
-              enum:
-                - http
+        - url: http://petstore.swagger.io/v2
       parameters:
         - name: username
           in: path

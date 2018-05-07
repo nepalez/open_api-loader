@@ -15,7 +15,7 @@ info:
   title: USPTO Data Set API
   contact:
     name: Open Data Portal
-    url: 'https://developer.uspto.gov'
+    url: https://developer.uspto.gov
     email: developer@uspto.gov
 tags:
   - name: metadata
@@ -30,14 +30,8 @@ paths:
       operationId: list-data-sets
       summary: List available data sets
       servers:
-        - url: '{scheme}://developer.uspto.gov/ds-api'
-          variables:
-            scheme:
-              description: 'The Data Set API is accessible via https and http'
-              enum:
-                - 'https'
-                - 'http'
-              default: 'https'
+        - url: https://developer.uspto.gov/ds-api
+        - url: http://developer.uspto.gov/ds-api
       responses:
         "200":
           description: Returns a list of data sets
@@ -99,14 +93,8 @@ paths:
         searched using the syntax options shown below.
       operationId: list-searchable-fields
       servers:
-        - url: '{scheme}://developer.uspto.gov/ds-api'
-          variables:
-            scheme:
-              description: 'The Data Set API is accessible via https and http'
-              enum:
-                - 'https'
-                - 'http'
-              default: 'https'
+        - url: https://developer.uspto.gov/ds-api
+        - url: http://developer.uspto.gov/ds-api
       parameters:
         - name: dataset
           in: path
@@ -157,14 +145,8 @@ paths:
         determined using above GET api.
       operationId: perform-search
       servers:
-        - url: '{scheme}://developer.uspto.gov/ds-api'
-          variables:
-            scheme:
-              description: 'The Data Set API is accessible via https and http'
-              enum:
-                - 'https'
-                - 'http'
-              default: 'https'
+        - url: https://developer.uspto.gov/ds-api
+        - url: http://developer.uspto.gov/ds-api
       parameters:
         - name: version
           in: path

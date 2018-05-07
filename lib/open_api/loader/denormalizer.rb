@@ -10,6 +10,7 @@ module OpenAPI::Loader
     require_relative "denormalizer/parameters"
     require_relative "denormalizer/security"
     require_relative "denormalizer/servers"
+    require_relative "denormalizer/variables"
 
     extend Dry::Initializer
     extend ConstructorShortcut[:call] # class-level .call
@@ -21,6 +22,6 @@ module OpenAPI::Loader
       source
     end
 
-    WRAPPERS = [Parameters, Security, Servers].freeze
+    WRAPPERS = [Parameters, Security, Servers, Variables].freeze
   end
 end
