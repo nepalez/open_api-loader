@@ -24,6 +24,7 @@ module OpenAPI
     require_relative "loader/reader"
     require_relative "loader/collector"
     require_relative "loader/translator"
+    require_relative "loader/denormalizer"
 
     #
     # Loads the specification from given file
