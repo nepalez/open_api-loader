@@ -47,13 +47,13 @@ The loader transforms the source in several ways:
 - collects all the [reference objects][ref] both local and remote (like `./models.yaml#/Pet` or `https://example.com/models#/Pet`), and includes them into the specification,
 - converts the specification from [OAS2][oas2] into [OAS3][oas3] standard,
 - removes the [components][components] because all links to its definitions are dereferenced,
-- denormalizes [servers][servers] and [parameters][parameters] by moving shared definitions from both [root][root] and [path items][paths] right into the corresponding [operations][operations],
+- denormalizes [servers][servers], [security][secuirty], and [parameters][parameters] by moving shared definitions from both [root][root] and [path items][paths] right into the corresponding [operations][operations],
 - substitutes [server variables][server variables] into urls to provide "flat" servers list.
 
 You can skip the last 3 steps using option:
 
 ```ruby
-OpenAPI::Loader.call "path_to/source.yaml", clean: false
+OpenAPI::Loader.call "path_to/source.yaml", denormalize: false
 ```
 
 ## Development
@@ -93,5 +93,6 @@ The gem is available as open source under the terms of the [MIT License][license
 [root]: https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.0.md#oasObject
 [server variables]: https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.0.md#serverVariableObject
 [servers]: https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.0.md#serverObject
+[security]: https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.0.md#securityRequirementObject
 [travis-badger]: https://img.shields.io/travis/nepalez/open_api-loader/master.svg?style=flat
 [travis]: https://travis-ci.org/nepalez/open_api-loader

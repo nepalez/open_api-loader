@@ -29,12 +29,16 @@ module OpenAPI
     #
     # Loads the specification from given file
     #
-    # @param  [String]  _filename The name of file containing a specification
-    # @option [Boolean] :_clean Whether a loader should clean the specification
+    # @param  [String]  filename The name of file containing a specification
+    # @option [Boolean] :denormalize Whether to denormalize specification
     # @return [Hash] the specification
     #
-    def load(_filename, _clean: true)
-      raise NotImplementedError
+    def call(filename, denormalize: true)
+      normalized = [Collector, Translator].inject(filename) do |output, item|
+        item.call(output)
+      end
+
+      denormalize ? Denormalizer.call(normalized) : normalized
     end
   end
 end
