@@ -56,18 +56,22 @@ You can skip the last 3 steps using option:
 OpenAPI::Loader.call "path_to/source.yaml", denormalize: false
 ```
 
-## Development
+## Development and Contributing
 
-The loader should ultimately provide some additional checks and transformations:
-- for now it doesn't check whether a [reference objects][ref] contain cycles
+Bug reports and pull requests are welcome on GitHub at https://github.com/nepalez/open_api-loader.
 
 After checking out the repo, run `bin/setup` to install dependencies.
 
 Before adding a PR, please run `rake` to run tests, style and documentation linters. You can also run `bin/console` for an interactive prompt [pry][pry] that will allow you to experiment.
 
-## Contributing
+## TODO
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/nepalez/open_api-loader.
+1. Check whether a [reference objects][ref] contain cycles
+2. Add script to run the loader from shell and save results to YAML/JSON file
+
+  ```shell
+  $ open_api load -s source.yaml -o output.yaml -d
+  ```
 
 ## License
 
