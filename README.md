@@ -46,7 +46,7 @@ The loader transforms the source in several ways:
 - collects all the [reference objects][ref] both local and remote (like `./models.yaml#/Pet` or `https://example.com/models#/Pet`), and includes them into the specification,
 - converts the specification from [OAS2][oas2] into [OAS3][oas3] standard,
 - removes the [components][components] because all links to its definitions are dereferenced,
-- denormalizes [servers][servers], [security][secuirty], and [parameters][parameters] by moving shared definitions from both [root][root] and [path items][paths] right into the corresponding [operations][operations],
+- denormalizes [servers][servers], [security][security], and [parameters][parameters] by moving shared definitions from both [root][root] and [path items][paths] right into the corresponding [operations][operations],
 - substitutes [server variables][server variables] into urls to provide "flat" servers list.
 
 You can skip the last 3 steps using option:

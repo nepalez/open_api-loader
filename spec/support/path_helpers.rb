@@ -1,5 +1,5 @@
 def local_path(content)
-  file = Tempfile.create
+  file = Tempfile.create ""
   File.write file, content
   file.path
 end
