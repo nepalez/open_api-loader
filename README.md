@@ -7,7 +7,6 @@ Loads [OAS2][oas2] or [OAS3][oas3] scheme from YAML/JSON file(s), and converts i
 
 [![Gem Version][gem-badger]][gem]
 [![Build Status][travis-badger]][travis]
-[![Dependency Status][gemnasium-badger]][gemnasium]
 [![Inline docs][inch-badger]][inch]
 
 ## Installation
@@ -82,8 +81,6 @@ The gem is available as open source under the terms of the [MIT License][license
 [components]: https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.0.md#componentsObject
 [gem-badger]: https://img.shields.io/gem/v/open_api-loader.svg?style=flat
 [gem]: https://rubygems.org/gems/open_api-loader
-[gemnasium-badger]: https://img.shields.io/gemnasium/nepalez/open_api-loader.svg?style=flat
-[gemnasium]: https://gemnasium.com/nepalez/open_api-loader
 [inch-badger]: http://inch-ci.org/github/nepalez/open_api-loader.svg
 [inch]: https://inch-ci.org/github/nepalez/open_api-loader
 [license]: https://opensource.org/licenses/MIT
